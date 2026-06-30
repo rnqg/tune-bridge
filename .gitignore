@@ -1,0 +1,10 @@
+.env
+.apple_music_user_token
+.spotify_token.json
+oauth.json
+*.p8
+reports/
+__pycache__/
+.pytest_cache/
+.venv/
+*.egg-info/

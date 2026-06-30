@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tune-bridge"
+version = "0.1.0"
+description = "Перенос лайкнутых треков из Яндекс Музыки в Apple Music, Spotify и YouTube Music"
+requires-python = ">=3.11"
+dependencies = [
+    "PyJWT[crypto]>=2.8.0",
+    "requests>=2.31.0",
+    "yandex-music>=2.2.0",
+    "ytmusicapi>=1.8.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0.0"
+]
+
+[project.scripts]
+tune-bridge = "ym_to_apple.cli:main"
+ym-to-apple = "ym_to_apple.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ym_to_apple*"]
